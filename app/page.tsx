@@ -48,15 +48,15 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[10%_center] opacity-70"
+          className="object-cover object-[68%_center] opacity-70 md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061d38]/95 via-[#061d38]/70 to-[#061d38]/20" />
-        <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-center px-6 py-28 lg:px-10">
-          <div className="max-w-4xl text-white">
+        <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-end px-6 pb-16 pt-40 md:items-center md:px-10 md:py-28">
+          <div className="max-w-[720px] text-white">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#d2a14a]">
               Rådgiver og historieforteller
             </p>
-            <h1 className="font-serif text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">
+            <h1 className="max-w-full break-words font-serif text-[3rem] font-bold leading-[1.05] sm:text-6xl md:text-6xl lg:text-7xl">
               Media, kommunikasjon og historiefortelling
             </h1>
             <div className="my-8 h-1 w-24 bg-[#d2a14a]" />
