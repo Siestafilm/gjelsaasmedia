@@ -76,7 +76,7 @@ export default function Home() {
       <section id="om-meg" className="mx-auto grid max-w-7xl gap-14 px-6 py-28 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-36">
         <div className="relative min-h-[420px] overflow-hidden rounded shadow-xl">
           <Image
-            src="/images/thomas-podcast.jpg"
+            src="/images/thomas-podcast.webp"
             alt="Thomas Gjelsås i podkaststudio"
             fill
             sizes="(max-width: 1024px) 100vw, 45vw"
@@ -130,7 +130,7 @@ export default function Home() {
       <section className="grid bg-white lg:grid-cols-2">
         <div className="relative min-h-[420px]">
           <Image
-            src="/images/podcast-studio.jpg"
+            src="/images/podcast-studio.webp"
             alt="Podkaststudio med mikrofon"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
