@@ -23,7 +23,12 @@ const services = [
   },
 ];
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ sent?: string; error?: string }>;
+}) {
+  const params = await searchParams;
   return (
     <main className="min-h-screen bg-[#f7f5f1] text-[#0b2341]">
       <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur">
@@ -114,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-28 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-36">
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 pt-28 pb-20 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:p-36 lg:pb-20">
         <div>
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#b7842b]">Erfaring</p>
           <h2 className="font-serif text-4xl font-bold leading-tight">Solid erfaring fra media, idrett og ledelse</h2>
@@ -127,6 +132,47 @@ export default function Home() {
           <li>• Administrerende direktør for galoppsporten i Norge</li>
           <li>• Erfaring fra lokalavis, radio, TV, reklame, sponsing og innholdsproduksjon</li>
         </ul>
+        <div className="col-span-full mt-16 border-t border-black/10 pt-10">
+  <div className="flex flex-wrap items-center justify-center gap-10 lg:justify-between">
+    
+    <img
+      src="/logos/nrk.webp"
+      alt="NRK"
+      className="h-12 w-auto object-contain opacity-80  transition hover:opacity-100 hover:grayscale-0"
+    />
+
+    <img
+      src="/logos/tv2.png"
+      alt="TV 2"
+      className="h-12 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+    />
+
+    <img
+      src="/logos/img.jpg"
+      alt="IMG"
+      className="h-10 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+    />
+
+    <img
+      src="/logos/tvnorge.webp"
+      alt="TV Norge"
+      className="h-17 w-auto object-contain opacity-70 transition hover:opacity-100 hover:grayscale-0"
+    />
+
+    <img
+      src="/logos/siesta.png"
+      alt="Siesta"
+      className="h-13 w-auto object-contain opacity-70 transition hover:opacity-100 hover:grayscale-0"
+    />
+
+    <img
+      src="/logos/goodwill.avif"
+      alt="Goodwill"
+      className="h-10 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+    />
+
+  </div>
+</div>
       </section>
 
       <section className="grid bg-white lg:grid-cols-2">
@@ -141,11 +187,11 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center px-6 py-24 lg:px-20 lg:py-32">
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#b7842b]">Podkast og foredrag</p>
-          <h2 className="font-serif text-4xl font-bold leading-tight">Innhold, samtaler og engasjement</h2>
-          <p className="mt-8 text-lg leading-8 text-[#1b2f4c]">
+          <h2 className="font-serif text-4xl max-w-[550px] font-bold leading-tight">Innhold, samtaler og engasjement</h2>
+          <p className="mt-8 max-w-[550px] text-lg leading-8 text-[#1b2f4c]">
             Jeg har produsert egen podkast og utvikler videre konsepter innen samtale, formidling og historiefortelling.
           </p>
-          <p className="mt-5 text-lg leading-8 text-[#1b2f4c]">
+          <p className="mt-5 max-w-[550px] text-lg leading-8 text-[#1b2f4c]">
             Sammen med psykolog Haakon Rydning arbeider jeg også med et foredrag om engasjement på arbeidsplassen – og hvordan ledelse, kommunikasjon og psykologisk trygghet påvirker kultur, motivasjon og prestasjon.
           </p>
         </div>
@@ -160,12 +206,51 @@ export default function Home() {
               Ta gjerne kontakt for en uforpliktende prat om rådgivning, mediestrategi, innhold, podkast, foredrag eller samarbeid.
             </p>
             <div className="mt-8 space-y-3 text-white/85">
-              <p><strong>E-post:</strong> <a className="hover:text-white" href="mailto:thomas@siestafilm.no">thomas@siestafilm.no</a></p>
+              <p><strong>E-post:</strong> <a className="hover:text-white" href="mailto:thomas@gjelsaas.no">thomas@gjelsaas.no</a></p>
               <p><strong>Telefon:</strong> <a className="hover:text-white" href="tel:+4790928454">+47 909 28 454</a></p>
+            </div>
+            <div className="mt-8 flex items-center gap-5">
+              <a
+                href="https://www.linkedin.com/in/thomas-gjels%C3%A5s-94424922/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-70 transition hover:opacity-100"
+              >
+                <img
+                  src="/icons/linkedin.png"
+                  alt="LinkedIn"
+                  className="h-8 w-8"
+                />
+              </a>
+
+              <a
+                href="https://www.instagram.com/thomasgjelsaas/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-70 transition hover:opacity-100"
+              >
+                <img
+                  src="/icons/instagram.png"
+                  alt="Instagram"
+                  className="h-8 w-8"
+                />
+              </a>
+
             </div>
           </div>
 
           <form action="/api/contact" method="POST" className="rounded bg-white p-6 text-[#0b2341] shadow-2xl md:p-8">
+          {params.sent === "1" && (
+            <div className="mb-5 rounded bg-green-100 px-4 py-3 text-sm font-bold text-green-900">
+              Takk! Meldingen er sendt.
+            </div>
+          )}
+
+          {params.error === "1" && (
+            <div className="mb-5 rounded bg-red-100 px-4 py-3 text-sm font-bold text-red-900">
+              Noe gikk galt. Prøv igjen eller send e-post direkte.
+            </div>
+          )}
             <div className="grid gap-5 md:grid-cols-2">
               <label className="block">
                 <span className="mb-2 block text-sm font-bold">Navn</span>
@@ -188,7 +273,7 @@ export default function Home() {
               Send melding
             </button>
             <p className="mt-4 text-sm text-[#1b2f4c]/70">
-              Skjemaet sender meldingen direkte til Thomas Gjelsås når API-ruten er satt opp.
+              Skjemaet sender meldingen direkte til Thomas Gjelsås.
             </p>
           </form>
         </div>
