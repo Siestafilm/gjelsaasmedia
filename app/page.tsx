@@ -56,14 +56,16 @@ export default function Home() {
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#d2a14a]">
               Rådgiver og historieforteller
             </p>
-            <h1 className="max-w-full break-words font-serif text-[3rem] font-bold leading-[1.05] sm:text-6xl md:text-6xl lg:text-7xl">
-              Media, kommunikasjon og historiefortelling
+            <h1 className="max-w-[92vw] font-serif text-[2.55rem] font-bold leading-[1.03] tracking-[-0.03em] sm:text-[3.2rem] md:text-6xl lg:text-7xl">
+              Media,<br />
+              kommunikasjon<br />
+              og historiefortelling
             </h1>
             <div className="my-8 h-1 w-24 bg-[#d2a14a]" />
-            <p className="text-lg leading-8 text-white/90 md:text-xl">
+            <p className="max-w-[92vw] text-[1.2rem] leading-8 text-white/90 md:max-w-xl md:text-xl">
               Jeg hjelper selskaper, organisasjoner og idrett med å utvikle historier som skaper synlighet, gjennomslag og engasjement.
             </p>
-            <p className="mt-5 text-lg leading-8 text-white/85 md:text-xl">
+            <p className="mt-5 max-w-[92vw] text-[1.2rem] leading-8 text-white/85 md:max-w-xl md:text-xl">
               30 års erfaring fra journalistikk, TV og ledelse – blant annet fra NRK, TV 2, IMG og internasjonal sportsdekning.
             </p>
             <a href="#kontakt" className="mt-10 inline-flex rounded bg-[#d2a14a] px-8 py-4 text-sm font-black uppercase tracking-wide text-[#061d38] shadow-lg transition hover:bg-[#e2b65f]">
@@ -151,7 +153,7 @@ export default function Home() {
 
       <section id="kontakt" className="bg-[#061d38] text-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-32">
-          <div>
+          <div className="mt-20">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#d2a14a]">Kontakt</p>
             <h2 className="font-serif text-4xl font-bold leading-tight md:text-5xl">La oss ta en prat</h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/80">
