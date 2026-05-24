@@ -135,41 +135,61 @@ export default async function Home({
         <div className="col-span-full mt-16 border-t border-black/10 pt-10">
   <div className="flex flex-wrap items-center justify-center gap-10 lg:justify-between">
     
-    <img
-      src="/logos/nrk.webp"
-      alt="NRK"
-      className="h-12 w-auto object-contain opacity-80  transition hover:opacity-100 hover:grayscale-0"
-    />
+    <a
+      href="https://www.nrk.no"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="/logos/nrk.webp"
+        alt="NRK"
+        className="h-12 w-auto object-contain opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
+      />
+    </a>
 
-    <img
+    <a
+      href="https://www.tv2.no"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
       src="/logos/tv2.png"
       alt="TV 2"
-      className="h-12 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+      className="h-12 w-auto object-contain opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
     />
+    </a>
 
+    <a href="https://www.img.com" target="_blank" rel="noopener noreferrer">
     <img
       src="/logos/img.jpg"
       alt="IMG"
-      className="h-10 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+      className="h-10 w-auto object-contain opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
     />
+    </a>
 
+     <a href="https://www.cic.no" target="_blank" rel="noopener noreferrer">
     <img
-      src="/logos/tvnorge.webp"
-      alt="TV Norge"
-      className="h-17 w-auto object-contain opacity-70 transition hover:opacity-100 hover:grayscale-0"
+      src="/logos/cic.svg"
+      alt="CIC Event Congress"
+      className="h-36 w-auto object-contain opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
     />
+    </a>
 
+    <a href="https://www.siesta.no" target="_blank" rel="noopener noreferrer">
     <img
       src="/logos/siesta.png"
       alt="Siesta"
-      className="h-13 w-auto object-contain opacity-70 transition hover:opacity-100 hover:grayscale-0"
+      className="h-13 w-auto object-contain opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
     />
-
+    </a>
+    
+    <a href="https://www.gwill.no" target="_blank" rel="noopener noreferrer">
     <img
       src="/logos/goodwill.avif"
       alt="Goodwill"
-      className="h-10 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+      className="h-10 w-auto object-contain opacity-80 transition duration-300 hover:scale-105 hover:opacity-100"
     />
+    </a>
 
   </div>
 </div>
@@ -207,7 +227,7 @@ export default async function Home({
             </p>
             <div className="mt-8 space-y-3 text-white/85">
               <p><strong>E-post:</strong> <a className="hover:text-white" href="mailto:thomas@gjelsaas.no">thomas@gjelsaas.no</a></p>
-              <p><strong>Telefon:</strong> <a className="hover:text-white" href="tel:+4790928454">+47 909 28 454</a></p>
+              <p><strong>Telefon:</strong> <a className="hover:text-white" href="tel:+4790928454">+47 916 28 998</a></p>
             </div>
             <div className="mt-8 flex items-center gap-5">
               <a
