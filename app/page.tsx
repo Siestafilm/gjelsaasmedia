@@ -209,10 +209,10 @@ export default async function Home({
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#b7842b]">Podkast og foredrag</p>
           <h2 className="font-serif text-4xl max-w-[550px] font-bold leading-tight">Innhold, samtaler og engasjement</h2>
           <p className="mt-8 max-w-[550px] text-lg leading-8 text-[#1b2f4c]">
-            Jeg har produsert egen podkast og utvikler videre konsepter innen samtale, formidling og historiefortelling.
+            Jeg har produsert egen podkast og er opptatt av historier, mennesker og kommunikasjon som skaper engasjement.
           </p>
           <p className="mt-5 max-w-[550px] text-lg leading-8 text-[#1b2f4c]">
-            Sammen med psykolog Haakon Rydning arbeider jeg også med et foredrag om engasjement på arbeidsplassen – og hvordan ledelse, kommunikasjon og psykologisk trygghet påvirker kultur, motivasjon og prestasjon.
+            I dag arbeider jeg også med utvikling av foredrag og innhold knyttet til kommunikasjon, ledelse og arbeidsliv.
           </p>
         </div>
       </section>
@@ -227,7 +227,7 @@ export default async function Home({
             </p>
             <div className="mt-8 space-y-3 text-white/85">
               <p><strong>E-post:</strong> <a className="hover:text-white" href="mailto:thomas@gjelsaas.no">thomas@gjelsaas.no</a></p>
-              <p><strong>Telefon:</strong> <a className="hover:text-white" href="tel:+4790928454">+47 916 28 998</a></p>
+              <p><strong>Telefon:</strong> <a className="hover:text-white" href="tel:+4791632998">+47 916 32 998</a></p>
             </div>
             <div className="mt-8 flex items-center gap-5">
               <a
