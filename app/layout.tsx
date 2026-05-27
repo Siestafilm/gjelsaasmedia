@@ -1,26 +1,46 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
+export const metadata = {
+  metadataBase: new URL("https://gjelsaas.no"),
   title: "Thomas Gjelsås | Media, kommunikasjon og historiefortelling",
   description:
-    "Thomas Gjelsås hjelper selskaper, organisasjoner og idrett med mediestrategi, PR, historiefortelling, innhold, podkast og foredrag.",
+    "Thomas Gjelsås hjelper selskaper, organisasjoner og idrett med mediestrategi, PR-rådgivning, medietrening, historiefortelling, podkast og foredrag om kommunikasjon.",
   keywords: [
     "Thomas Gjelsås",
-    "medierådgiver",
+    "medierådgiver Oslo",
+    "PR-rådgivning",
+    "mediestrategi",
     "kommunikasjon",
-    "PR",
     "historiefortelling",
     "medietrening",
+    "foredrag om kommunikasjon",
     "podkast",
-    "foredrag",
+    "innholdsproduksjon",
   ],
   openGraph: {
     title: "Thomas Gjelsås | Media og kommunikasjon",
     description:
-      "Rådgivning, innhold og historiefortelling basert på 30 års erfaring fra media, TV, sport og ledelse.",
-    type: "website",
+      "Mediestrategi, PR-rådgivning, historiefortelling, medietrening, podkast og foredrag.",
+    url: "https://gjelsaas.no",
+    siteName: "Thomas Gjelsås",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Thomas Gjelsås – media, kommunikasjon og historiefortelling",
+      },
+    ],
     locale: "nb_NO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thomas Gjelsås | Media og kommunikasjon",
+    description:
+      "Mediestrategi, PR-rådgivning, historiefortelling, medietrening, podkast og foredrag.",
+    images: ["/og-image.jpg"],
   },
 };
 
