@@ -10,19 +10,33 @@ export async function POST(request: Request) {
   const subject = String(formData.get("subject") || "Ny melding fra nettsiden");
   const message = String(formData.get("message") || "");
 
-  await resend.emails.send({
-    from: "Gjelsås Media <kontakt@gjelsaas.no>",
-    to: "thomas@gjelsaas.no",
-    replyTo: email,
-    subject: `Kontaktskjema: ${subject}`,
-    text: `
+const { data, error } = await resend.emails.send({
+  from: "Gjelsås Media <kontakt@gjelsaas.no>",
+  to: "thomas@gjelsaas.no",
+  replyTo: email,
+  subject: `Kontaktskjema: ${subject}`,
+
+  text: `
 Navn: ${name}
+
 E-post: ${email}
 
 Melding:
 ${message}
 `,
-  });
+
+  html: `
+    <h2>Ny melding fra kontaktskjema</h2>
+
+    <p><strong>Navn:</strong> ${name}</p>
+
+    <p><strong>E-post:</strong> ${email}</p>
+
+    <p><strong>Melding:</strong></p>
+
+    <p>${message}</p>
+  `,
+});
 
   return Response.redirect(new URL("/?sent=1#kontakt", request.url));
 }
