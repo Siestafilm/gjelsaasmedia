@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   const message = String(formData.get("message") || "");
 
 const { data, error } = await resend.emails.send({
-  from: "Gjelsås Media <kontakt@gjelsaas.no>",
+  from: "Gjelsås Media og Kommunikasjon <kontakt@gjelsaas.no>",
   to: "thomas@gjelsaas.no",
   replyTo: email,
   subject: `Kontaktskjema: ${subject}`,
