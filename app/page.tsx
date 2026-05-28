@@ -39,7 +39,7 @@ export default async function Home({
               Media · kommunikasjon · historiefortelling
             </div>
           </a>
-          <nav className="flex gap-8 text-sm font-bold uppercase tracking-wide">
+          <nav className="flex gap-8 text-sm font-semibold uppercase tracking-wide">
             <a className="hover:text-[#b7842b]" href="#om-meg">Om meg</a>
             <a className="hover:text-[#b7842b]" href="#kontakt">Kontakt</a>
           </nav>
@@ -53,12 +53,12 @@ export default async function Home({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[68%_center] opacity-70 md:object-center"
+          className="object-cover object-[68%_center] opacity-70 transition duration-700 hover:scale-[1.02] md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061d38]/95 via-[#061d38]/70 to-[#061d38]/20" />
         <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-end px-6 pb-16 pt-40 md:items-center md:px-10 md:py-28">
           <div className="max-w-[720px] text-white">
-            <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#d2a14a]">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#d2a14a]">
               Rådgiver og historieforteller
             </p>
             <h1 className="max-w-[92vw] font-serif text-[2.55rem] font-bold leading-[1.03] tracking-[-0.03em] sm:text-[3.2rem] md:text-6xl lg:text-7xl">
@@ -91,8 +91,8 @@ export default async function Home({
           />
         </div>
         <div className="flex flex-col justify-center">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#b7842b]">Om meg</p>
-          <h2 className="font-serif text-4xl font-bold leading-tight md:text-5xl">Historier. Mennesker. Engasjement.</h2>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#b7842b]">Om meg</p>
+          <h2 className="font-serif text-4xl font-semibold leading-tight md:text-5xl">Historier. Mennesker. Engasjement.</h2>
           <div className="mt-8 space-y-5 text-lg leading-8 text-[#1b2f4c]">
             <p>Jeg har arbeidet i skjæringspunktet mellom journalistikk, TV, sport, ledelse og kommunikasjon i mer enn 30 år.</p>
             <p>Gjennom karrieren har jeg vært journalist, reporter, redaktør og programleder, dekket tre olympiske leker og ledet mediesatsinger og organisasjoner innen sport og underholdning.</p>
@@ -103,13 +103,16 @@ export default async function Home({
 
       <section className="bg-white py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="text-center text-sm font-bold uppercase tracking-[0.28em] text-[#b7842b]">Hva jeg kan bidra med</p>
+          <p className="text-center text-sm font-semibold uppercase tracking-[0.28em] text-[#b7842b]">Hva jeg kan bidra med</p>
           <h2 className="mx-auto mt-4 max-w-4xl text-center font-serif text-4xl font-bold leading-tight md:text-5xl">
             Rådgivning, innhold og formidling som skaper verdi
           </h2>
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <article key={service.title} className="rounded bg-white p-8 text-center shadow-xl ring-1 ring-black/5">
+              <article
+                key={service.title}
+                className="rounded bg-white p-8 text-center shadow-xl ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              >
                 <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#061d38] text-2xl text-white">{service.icon}</div>
                 <h3 className="text-xl font-black leading-snug">{service.title}</h3>
                 <p className="mt-5 leading-7 text-[#1b2f4c]">{service.text}</p>

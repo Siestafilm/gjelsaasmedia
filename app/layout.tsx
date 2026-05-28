@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Inter, Cormorant_Garamond } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+});
 
 export const metadata = {
   metadataBase: new URL("https://gjelsaas.no"),
@@ -18,6 +29,10 @@ export const metadata = {
     "podkast",
     "innholdsproduksjon",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Thomas Gjelsås | Media og kommunikasjon",
     description:
@@ -51,7 +66,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nb">
-      <body>{children}</body>
+    <body className={`${inter.variable} ${cormorant.variable}`}>
+      {children}
+    </body>
     </html>
   );
 }
