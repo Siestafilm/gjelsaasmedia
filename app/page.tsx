@@ -32,14 +32,17 @@ export default async function Home({
   return (
     <main className="min-h-screen bg-[#f7f5f1] text-[#0b2341]">
       <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-          <a href="#top" className="leading-tight">
-            <div className="text-2xl font-black tracking-wide">THOMAS GJELSÅS</div>
-            <div className="text-xs font-bold uppercase tracking-[0.18em] text-[#334]">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-10 lg:py-5">
+          <a href="#top" className="min-w-0 leading-tight">
+            <div className="text-[1.7rem] font-black leading-[0.95] tracking-wide sm:text-2xl">
+              THOMAS<br className="sm:hidden" /> GJELSÅS
+            </div>
+            <div className="mt-2 max-w-[230px] text-[0.72rem] font-bold uppercase leading-[1.45] tracking-[0.22em] text-[#334] sm:max-w-none sm:text-xs">
               Media · kommunikasjon · historiefortelling
             </div>
           </a>
-          <nav className="flex gap-8 text-sm font-semibold uppercase tracking-wide">
+
+          <nav className="flex shrink-0 gap-5 text-[0.85rem] font-bold uppercase tracking-wide sm:gap-8 sm:text-sm">
             <a className="hover:text-[#b7842b]" href="#om-meg">Om meg</a>
             <a className="hover:text-[#b7842b]" href="#kontakt">Kontakt</a>
           </nav>
@@ -56,12 +59,12 @@ export default async function Home({
           className="object-cover object-[68%_center] opacity-70 transition duration-700 hover:scale-[1.02] md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061d38]/95 via-[#061d38]/70 to-[#061d38]/20" />
-        <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-end px-6 pb-16 pt-40 md:items-center md:px-10 md:py-28">
+        <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-end px-5 pb-20 pt-28 md:items-center md:px-10 md:py-28">
           <div className="max-w-[720px] text-white">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#d2a14a]">
               Rådgiver og historieforteller
             </p>
-            <h1 className="max-w-[92vw] font-serif text-[2.55rem] font-bold leading-[1.03] tracking-[-0.03em] sm:text-[3.2rem] md:text-6xl lg:text-7xl">
+            <h1 className="max-w-[90vw] font-serif text-[2.35rem] font-bold leading-[1.02] tracking-[-0.035em] sm:text-[3.2rem] md:text-6xl lg:text-7xl">
               Media,<br />
               kommunikasjon<br />
               og historiefortelling
