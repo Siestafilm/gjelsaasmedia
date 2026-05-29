@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "./components/Reveal";
 
 const services = [
   {
@@ -93,7 +94,7 @@ export default async function Home({
       </section>
 
       <section id="om-meg" className="mx-auto grid max-w-7xl gap-14 px-6 py-28 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-36">
-        <div className="relative min-h-[420px] overflow-hidden rounded shadow-xl">
+        <Reveal className="relative min-h-[420px] overflow-hidden rounded shadow-xl">
           <Image
             src="/images/thomas-podcast.webp"
             alt="Thomas Gjelsås i podkaststudio"
@@ -101,8 +102,8 @@ export default async function Home({
             sizes="(max-width: 1024px) 100vw, 45vw"
             className="object-cover"
           />
-        </div>
-        <div className="flex flex-col justify-center">
+        </Reveal>
+        <Reveal className="flex flex-col justify-center" delay={0.08}>
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#b7842b]">Om meg</p>
           <h2 className="font-serif text-4xl font-semibold leading-tight md:text-5xl">Historier. Mennesker. Engasjement.</h2>
           <div className="mt-8 space-y-5 text-lg leading-8 text-[#1b2f4c]">
@@ -110,35 +111,37 @@ export default async function Home({
             <p>Gjennom karrieren har jeg vært journalist, reporter, redaktør og programleder, dekket tre olympiske leker og ledet mediesatsinger og organisasjoner innen sport og underholdning.</p>
             <p>I dag arbeider jeg med rådgivning, PR, innholdsproduksjon, podkast og foredrag – med særlig vekt på medier, historiefortelling, engasjement og kommunikasjon som skaper effekt.</p>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="bg-white py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="text-center text-sm font-semibold uppercase tracking-[0.28em] text-[#b7842b]">Hva jeg kan bidra med</p>
-          <h2 className="mx-auto mt-4 max-w-4xl text-center font-serif text-4xl font-bold leading-tight md:text-5xl">
-            Rådgivning, innhold og formidling som skaper verdi
-          </h2>
+          <Reveal>
+            <p className="text-center text-sm font-semibold uppercase tracking-[0.28em] text-[#b7842b]">Hva jeg kan bidra med</p>
+            <h2 className="mx-auto mt-4 max-w-4xl text-center font-serif text-4xl font-bold leading-tight md:text-5xl">
+              Rådgivning, innhold og formidling som skaper verdi
+            </h2>
+          </Reveal>
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <article
-                key={service.title}
-                className="rounded bg-white p-8 text-center shadow-xl ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#061d38] text-2xl text-white">{service.icon}</div>
-                <h3 className="text-xl font-black leading-snug">{service.title}</h3>
-                <p className="mt-5 leading-7 text-[#1b2f4c]">{service.text}</p>
-              </article>
+            {services.map((service, index) => (
+              <Reveal key={service.title} delay={index * 0.08}>
+                <article className="rounded bg-white p-8 text-center shadow-xl ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                  <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#061d38] text-2xl text-white">{service.icon}</div>
+                  <h3 className="text-xl font-black leading-snug">{service.title}</h3>
+                  <p className="mt-5 leading-7 text-[#1b2f4c]">{service.text}</p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-12 px-6 pt-28 pb-20 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:p-36 lg:pb-20">
-        <div>
+        <Reveal>
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#b7842b]">Erfaring</p>
           <h2 className="font-serif text-4xl font-bold leading-tight">Solid erfaring fra media, idrett og ledelse</h2>
-        </div>
+        </Reveal>
+        <Reveal delay={0.08}>
         <ul className="grid gap-4 text-lg leading-7 text-[#1b2f4c] md:grid-cols-2">
           <li>• Journalist, reporter, redaktør og programleder</li>
           <li>• Programleder for NRK, TV 2 og TV Norge</li>
@@ -147,7 +150,8 @@ export default async function Home({
           <li>• Administrerende direktør for galoppsporten i Norge</li>
           <li>• Erfaring fra lokalavis, radio, TV, reklame, sponsing og innholdsproduksjon</li>
         </ul>
-        <div className="col-span-full mt-16 border-t border-black/10 pt-10">
+        </Reveal>
+        <Reveal className="col-span-full mt-16 border-t border-black/10 pt-10" delay={0.12}>
   <div className="flex flex-wrap items-center justify-center gap-10 lg:justify-between">
     
     <a
@@ -207,11 +211,11 @@ export default async function Home({
     </a>
 
   </div>
-</div>
+</Reveal>
       </section>
 
       <section className="grid bg-white lg:grid-cols-2">
-        <div className="relative min-h-[420px]">
+        <Reveal className="relative min-h-[420px]">
           <Image
             src="/images/podcast-studio.webp"
             alt="Podkaststudio med mikrofon"
@@ -219,8 +223,8 @@ export default async function Home({
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
           />
-        </div>
-        <div className="flex flex-col justify-center px-6 py-24 lg:px-20 lg:py-32">
+        </Reveal>
+        <Reveal className="flex flex-col justify-center px-6 py-24 lg:px-20 lg:py-32" delay={0.08}>
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#b7842b]">Podkast og foredrag</p>
           <h2 className="font-serif text-4xl max-w-[550px] font-bold leading-tight">Innhold, samtaler og engasjement</h2>
           <p className="mt-8 max-w-[550px] text-lg leading-8 text-[#1b2f4c]">
@@ -229,12 +233,12 @@ export default async function Home({
           <p className="mt-5 max-w-[550px] text-lg leading-8 text-[#1b2f4c]">
             I dag arbeider jeg også med utvikling av foredrag og innhold knyttet til kommunikasjon, ledelse og arbeidsliv.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <section id="kontakt" className="bg-[#061d38] text-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-32">
-          <div className="mt-20">
+          <Reveal className="mt-20">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-[#d2a14a]">Kontakt</p>
             <h2 className="font-serif text-4xl font-bold leading-tight md:text-5xl">La oss ta en prat</h2>
             <p className="mt-6 max-w-xl text-lg leading-8 text-white/80">
@@ -272,8 +276,9 @@ export default async function Home({
               </a>
 
             </div>
-          </div>
+          </Reveal>
 
+          <Reveal delay={0.08}>
           <form action="/api/contact" method="POST" className="rounded bg-white p-6 text-[#0b2341] shadow-2xl md:p-8">
           {params.sent === "1" && (
             <div className="mb-5 rounded bg-green-100 px-4 py-3 text-sm font-bold text-green-900">
@@ -311,6 +316,7 @@ export default async function Home({
               Skjemaet sender meldingen direkte til Thomas Gjelsås.
             </p>
           </form>
+          </Reveal>
         </div>
       </section>
 
