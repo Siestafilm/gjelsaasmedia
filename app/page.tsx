@@ -56,10 +56,19 @@ export default async function Home({
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[68%_0%] opacity-80 transition duration-700 hover:scale-[1.02] md:object-center"
+        className="hidden object-cover object-center opacity-80 transition duration-700 hover:scale-[1.02] md:block"
+      />
+
+      <Image
+        src="/images/thomas-portrett-mobile.webp"
+        alt="Thomas Gjelsås – rådgiver innen media, kommunikasjon og historiefortelling"
+        fill
+        priority
+        sizes="100vw"
+        className="block object-cover object-top opacity-80 md:hidden"
       />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061d38]/95 via-[#061d38]/70 to-[#061d38]/20" />
-        <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-end px-5 pb-20 pt-40 md:min-h-[82vh] md:items-center md:px-10 md:py-28">
+        <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-end px-5 pb-20 pt-28 md:pt-28 md:items-center md:px-10 md:py-28">
           <div className="max-w-[720px] text-white">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#d2a14a]">
               Rådgiver og historieforteller
