@@ -68,7 +68,7 @@ export default async function Home({
         className="block object-cover object-top opacity-80 md:hidden"
       />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061d38]/95 via-[#061d38]/70 to-[#061d38]/20" />
-        <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-end px-5 pb-20 pt-28 md:pt-28 md:items-center md:px-10 md:py-28">
+        <div className="relative mx-auto flex min-h-[82vh] max-w-7xl items-end px-5 pb-20 pt-44 md:pt-28 md:items-center md:px-10 md:py-28">
           <div className="max-w-[720px] text-white">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#d2a14a]">
               Rådgiver og historieforteller
